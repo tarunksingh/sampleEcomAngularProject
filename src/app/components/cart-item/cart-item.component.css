@@ -1,0 +1,67 @@
+.card-item {
+  display: flex;
+  padding: 20px;
+}
+.card-item-info {
+  flex: auto;
+  margin: auto;
+  width: 45%;
+}
+.card-item-quantity,
+.card-item-total-price,
+.card-item-price {
+  width: 15%;
+}
+
+.card-item-quantity input {
+  width: 40px;
+  text-align: center;
+}
+
+.card-item-quantity input[type="button"] {
+  width: 25px;
+}
+
+.card-item-delete {
+  text-align: right;
+  width: 5%;
+}
+
+.card-item-image {
+  width: 50px;
+  height: auto;
+  min-width: 5%;
+}
+
+.favorite {
+  margin: auto;
+  display: flex;
+}
+
+.favorite-text {
+  line-height: 24px;
+  display: inline-block;
+}
+
+.card-item-finance-image img {
+  min-width: 30px;
+  width: 30px;
+  height: auto;
+}
+
+mat-card {
+  border: 1px solid rgb(163, 162, 162);
+  border-radius: 0 !important;
+  margin: 10px 0px;
+  padding: 0;
+}
+
+.card-footer {
+  border-top: 1px solid rgb(163, 162, 162);
+  padding: 20px;
+  background: #f3f3f3;
+}
+
+.stor-selection {
+  padding-left: 20px;
+}

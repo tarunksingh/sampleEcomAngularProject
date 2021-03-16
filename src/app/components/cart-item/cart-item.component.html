@@ -1,0 +1,54 @@
+<mat-card>
+  <mat-card-content>
+    <div class="card-item">
+      <div class="card-item-image"><img src="{{ cartItem.imageUrl }}" /></div>
+      <div class="card-item-info">
+        <div class="card-item-name">
+          <a href="{{ cartItem.pdpUrl }}"> {{ cartItem.itemName }} </a>
+        </div>
+        <div class="card-item-finance-image">
+          <img src="{{ cartItem.bmFinanceDetail.financeImg }}" />
+          <a href="{{ cartItem.bmFinanceDetail.financePromoUrl }}">{{
+            cartItem.bmFinanceDetail.financePromoMsg
+          }}</a>
+        </div>
+        <div class="favorite">
+          <span class="material-icons"> favorite_border </span>
+          <span class="favorite-text">Add to wishlist</span>
+        </div>
+      </div>
+      <div class="card-item-info card-item-quantity">
+        <input matInput type="button" value="-" />
+        <input matInput value="{{ cartItem.itemQuantity }}" />
+        <input matInput type="button" value="+" />
+      </div>
+      <div class="card-item-info card-item-price">
+        {{ cartItem.itemAmount.itemPrice | currency }}
+      </div>
+      <div class="card-item-info card-item-total-price">
+        {{ cartItem.itemAmount.itemTotalPrice | currency }}
+      </div>
+      <div class="card-item-info card-item-delete">
+        <span class="material-icons"> delete </span>
+      </div>
+    </div>
+    <div class="card-footer">
+      <mat-label>Choose your delivery option : </mat-label>
+      <select matNativeControl required [(value)]="cartItem.shippingType">
+        <option value="EMAIL">Digitel</option>
+        <option value="shipping">Delever Online</option>
+        <option value="Store">Store</option>
+      </select>
+      <span class="stor-selection" *ngIf="cartItem.shippingType == 'Store'">
+        <select matNativeControl required>
+          <option
+            *ngFor="let store of cartItem.stores"
+            value="{{ store.storeId }}"
+          >
+            {{ store.storeName }}
+          </option>
+        </select>
+      </span>
+    </div>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,29 @@
+mat-card {
+  border: 1px solid rgb(163, 162, 162);
+  border-radius: 0 !important;
+}
+
+.checkout-info {
+  display: flex;
+}
+.checkout-info .lable {
+  width: 50%;
+}
+
+.checkout-info .value {
+  width: 50%;
+  text-align: right;
+  font-weight: 700;
+}
+
+.checkout {
+  text-align: center;
+}
+
+.checkout-btn {
+  padding: 10px;
+  color: white;
+  background-color: brown;
+  border: none;
+  border-radius: 4px;
+}

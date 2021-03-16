@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-title>ORDER SUMMARY</mat-card-title>
+  <hr />
+  <mat-card-content>
+    <div class="checkout-info">
+      <span class="lable">Subtotal</span
+      ><span class="value">{{ cartSummary?.subtotal | currency }}</span>
+    </div>
+    <div class="checkout-info">
+      <span class="lable">Estimated Tax</span
+      ><span class="value">{{ cartSummary?.taxAmount | currency }}</span>
+    </div>
+    <hr />
+    <div class="checkout-info">
+      <span class="lable">Estimated Total</span
+      ><span class="value">{{ cartSummary?.cartTotal | currency }}</span>
+    </div>
+    <hr />
+    <div><span>*</span>{{ cartSummary?.taxDisclaimer }}</div>
+  </mat-card-content>
+  <div class="checkout">
+    <button class="checkout-btn" mat-button color="warn">
+      START SECUERED CHECKOUT
+    </button>
+  </div>
+</mat-card>

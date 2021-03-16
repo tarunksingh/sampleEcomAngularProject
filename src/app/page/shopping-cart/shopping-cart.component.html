@@ -1,0 +1,23 @@
+<div class="main-container">
+  <div class="item-list-container">
+    <div class="item">
+      <hr />
+      <div class="cart-grid-lables">
+        <div class="card-item-product">Product</div>
+        <div class="card-item-quantity">QTY</div>
+        <div class="card-item-price">PRICE</div>
+        <div class="card-item-total-price">TOTAL</div>
+        <div class="card-item-delete"></div>
+      </div>
+      <hr />
+      <div *ngFor="let item of cartData?.cartDetails.cartItems">
+        <app-cart-item [cartItem]="item"></app-cart-item>
+      </div>
+    </div>
+  </div>
+  <div class="checkout-info">
+    <app-checkout
+      [cartSummary]="cartData?.cartDetails?.cartSummary"
+    ></app-checkout>
+  </div>
+</div>
